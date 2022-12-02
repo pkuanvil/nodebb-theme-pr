@@ -39,6 +39,20 @@
 							<span class="register-feedback" id="password-confirm-notify"></span>
 						</div>
 					</div>
+					<div class="col-lg-offset-4 col-lg-8">
+						<button class="btn btn-lg btn-block" id="pr-button" type="submit">[[register:pr-button]]</button>
+					</div>
+					<div class="col-lg-offset-4 col-lg-8">
+						<label for="pr-txt">
+							<span>[[register:pr-message-1]]</span>
+							<span id="pr-email"></span>
+							<span>[[register:pr-message-2]]</span>
+						</label>
+						<div>
+							<span id="pr-feedback"></span>
+						</div>
+						<div id="pr-txt" style="line-break: anywhere"></div>
+					</div>
 
 					{{{each regFormEntry}}}
 					<div class="form-group">

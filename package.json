@@ -4,12 +4,8 @@
   "nbbpm": {
     "compatibility": "^2.0.0"
   },
-  "description": "Persona theme for NodeBB",
+  "description": "PR theme for NodeBB",
   "main": "library.js",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/NodeBB/nodebb-theme-persona"
-  },
   "scripts": {
     "lint": "eslint ."
   },
@@ -38,9 +34,6 @@
     }
   ],
   "license": "BSD-2-Clause",
-  "bugs": {
-    "url": "https://github.com/NodeBB/nodebb-theme-persona/issues"
-  },
   "dependencies": {
     "pulling": "^2.0.0",
     "striptags": "^3.2.0"
