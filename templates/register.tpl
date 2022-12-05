@@ -19,6 +19,7 @@
 							<input class="form-control" type="text" placeholder="[[register:username_placeholder]]" name="username" id="username" autocorrect="off" autocapitalize="off" autocomplete="off" />
 							<span class="register-feedback" id="username-notify"></span>
 							<span class="form-text">[[register:help.username_restrictions, {minimumUsernameLength}, {maximumUsernameLength}]]</span>
+							<span class="form-text pr-warning">[[register:pr_help.username_warning]]</span>
 						</div>
 					</div>
 					<div class="row mb-2">
