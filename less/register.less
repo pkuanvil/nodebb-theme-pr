@@ -16,6 +16,11 @@
 
 	.help-block {
 		font-size: 13px;
+		// Not .help-block.pr-warning, due to build bug: that will be recognized the same as .help-block .pr-warning
+		&.pr-warning {
+			color: brown;
+			font-weight: 700;		
+		}
 	}
 
 	.register-success {
