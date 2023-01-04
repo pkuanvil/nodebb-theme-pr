@@ -1,3 +1,4 @@
+<!-- IMPORT partials/noscript/register-require-javascript.tpl -->
 <!-- IMPORT partials/breadcrumbs.tpl -->
 <div data-widget-area="header">
 	{{{each widgets.header}}}
