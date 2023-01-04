@@ -6,5 +6,6 @@
     "settings.autoHidingNavbar-xs": "Very small screens (e.g. phones in portrait mode)",
     "settings.autoHidingNavbar-sm": "Smaller screens (e.g. phones, some tablets)",
     "settings.autoHidingNavbar-md": "Medium sized screens (e.g. tablets in landscape mode)",
-    "settings.autoHidingNavbar-lg": "Larger screens (e.g. desktop computers)"
+    "settings.autoHidingNavbar-lg": "Larger screens (e.g. desktop computers)",
+    "register-require-javascript": "Registeration requires Javascript."
 }
