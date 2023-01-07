@@ -61,11 +61,15 @@
 		</div>
 
 		<div class="text-center profile-meta">
+			<!-- IF joindateISO -->
 			<span>[[user:joined]]</span>
 			<strong class="timeago" title="{joindateISO}"></strong>
+			<!-- ENDIF joindateISO -->
 
+			<!-- IF lastonlineISO -->
 			<span>[[user:lastonline]]</span>
 			<strong class="timeago" title="{lastonlineISO}"></strong><br />
+			<!-- ENDIF lastonlineISO -->
 
 			<!-- IF email -->
 			<span>[[user:email]]</span>
