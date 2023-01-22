@@ -95,6 +95,15 @@
 				</div>
 			</div>
 
+			<h4>[[persona:pr-filter]]</h4>
+			<div class="well">
+				<div class="form-group">
+					<label for="pr_blockTags">[[persona:pr-blocktags]]</label>
+					<input type="text" class="form-control" data-property="pr_blockTags" id="pr_blockTags" value="{settings.pr_blockTags}"/>
+					<p class="help-block">[[persona:pr-blocktags-help]]</p>
+				</div>
+			</div>
+
 			<h4>[[global:pagination]]</h4>
 			<div class="card card-body mb-3">
 				<div class="mb-2 form-check">
