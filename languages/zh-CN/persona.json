@@ -2,6 +2,7 @@
     "mobile-menu-side": "移动端导航菜单切换到另一侧",
     "post-quick-reply": "快速回复",
     "pr-filter": "过滤",
+    "pr-register-notice-dkim": "DKIM 注册请点击<a href='./pr_dkim_upload'>上传界面</a>提交含 DKIM 签名的邮件",
     "pr-blocktags": "过滤标签",
     "pr-blocktags-help": "输入用英文逗号 ',' 隔开的你想要过滤的标签列表，大小写不敏感",
     "register-require-javascript": "注册需要 Javascript."
