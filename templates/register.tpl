@@ -15,6 +15,8 @@
 				</div>
 				<div class="pr-warning" id="pr-register-notice">
 					<strong>[[register:pr_help.register-notice]]</strong>
+					<br/>
+					<strong>[[persona:pr-register-notice-dkim]]</strong>
 				</div>
 				<form component="register/local" class="form-horizontal" role="form" action="{config.relative_path}/register" method="post">
 					<div class="form-group">

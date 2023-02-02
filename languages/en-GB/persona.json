@@ -8,6 +8,7 @@
     "settings.autoHidingNavbar-md": "Medium sized screens (e.g. tablets in landscape mode)",
     "settings.autoHidingNavbar-lg": "Larger screens (e.g. desktop computers)",
     "pr-filter": "Filter",
+    "pr-register-notice-dkim": "For DKIM register, please click <a href='./pr_dkim_upload'>upload page</a> to submit email with DKIM Signature",
     "pr-blocktags": "Filter tags",
     "pr-blocktags-help": "Enter the list of tags separated by comman ',' that you want to filter, case insensitive",
     "register-require-javascript": "Registeration requires Javascript."
