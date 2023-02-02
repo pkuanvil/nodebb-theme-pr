@@ -14,9 +14,7 @@
 					<p>{error}</p>
 				</div>
 				<div class="pr-warning" id="pr-register-notice">
-					<strong>[[register:pr_help.register-notice]]</strong>
-					<br/>
-					<strong>[[persona:pr-register-notice-dkim]]</strong>
+					<strong>[[persona:pr_register.register-notice]]</strong>
 				</div>
 				<form component="register/local" class="form-horizontal" role="form" action="{config.relative_path}/register" method="post">
 					<div class="form-group">
@@ -25,7 +23,7 @@
 							<input class="form-control" type="text" placeholder="[[register:username_placeholder]]" name="username" id="username" autocorrect="off" autocapitalize="off" autocomplete="off" />
 							<span class="register-feedback" id="username-notify"></span>
 							<span class="help-block">[[register:help.username_restrictions, {minimumUsernameLength}, {maximumUsernameLength}]]</span>
-							<span class="help-block pr-warning">[[register:pr_help.username_warning]]</span>
+							<span class="help-block pr-warning">[[persona:pr_register.username_warning]]</span>
 						</div>
 					</div>
 					<div class="form-group">
@@ -47,13 +45,13 @@
 						</div>
 					</div>
 					<div class="col-lg-offset-4 col-lg-8">
-						<button class="btn btn-lg btn-block" id="pr-button" type="submit">[[register:pr-button]]</button>
+						<button class="btn btn-lg btn-block" id="pr-button" type="submit">[[persona:pr_register.button]]</button>
 					</div>
 					<div class="col-lg-offset-4 col-lg-8">
 						<label for="pr-txt">
-							<span>[[register:pr-message-1]]</span>
+							<span>[[persona:pr_register.message-1]]</span>
 							<span id="pr-email"></span>
-							<span>[[register:pr-message-2]]</span>
+							<span>[[persona:pr_register.message-2]]</span>
 						</label>
 						<div>
 							<span id="pr-feedback"></span>

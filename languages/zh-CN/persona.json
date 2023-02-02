@@ -2,8 +2,13 @@
     "mobile-menu-side": "移动端导航菜单切换到另一侧",
     "post-quick-reply": "快速回复",
     "pr-filter": "过滤",
-    "pr-register-notice-dkim": "DKIM 注册请点击<a href='./pr_dkim_upload'>上传界面</a>提交含 DKIM 签名的邮件",
     "pr-blocktags": "过滤标签",
     "pr-blocktags-help": "输入用英文逗号 ',' 隔开的你想要过滤的标签列表，大小写不敏感",
-    "register-require-javascript": "注册需要 Javascript."
+    "pr_register.register-notice": "注册前请查看<a href='../topic/14'>注册说明</a>；DKIM 注册请点击<a href='./pr_dkim_upload'>上传界面</a>提交含 DKIM 签名的邮件",
+    "pr_register.username_warning": "目前由于代码中的bug，注册时只能使用纯ASCII字符。注册完成后可以在用户设置中修改用户名为非ASCII字符",
+    "pr_register.button": "生成邮件验证信息",
+    "pr_register.message-1": "请使用本站认可的邮件地址（pku.edu.cn 或 stu.pku.edu.cn 或 pku.org.cn 或 alumni.pku.edu.cn），将以下信息发送到邮件 ",
+    "pr_register.message-2": " 。建议您的验证邮件以纯文本模式发送，并把下述信息粘贴到邮件的标题和正文：",
+    "pr_register.txt-placeholder": "&lt;点击上方的按钮生成邮件验证信息&gt;",
+    "pr_register.register-require-javascript": "注册需要 Javascript."
 }
