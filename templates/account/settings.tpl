@@ -54,6 +54,11 @@
 					</strong>
 				</div>
 				<!-- ENDIF !hideFullname -->
+				<div class="checkbox">
+					<label>
+						<input type="checkbox" data-property="pr_showOnlineTime" <!-- IF settings.pr_showOnlineTime -->checked<!-- ENDIF settings.pr_showOnlineTime -->/> <strong>[[persona:pr-showonlinetime]]</strong>
+					</label>
+				</div>
 				<!-- IF !config.disableChat -->
 				<div class="form-check">
 					<input class="form-check-input" type="checkbox" data-property="restrictChat" <!-- IF settings.restrictChat -->checked<!-- ENDIF settings.restrictChat -->/>
