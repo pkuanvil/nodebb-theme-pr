@@ -4,6 +4,7 @@
     "pr-filter": "过滤",
     "pr-blocktags": "过滤标签",
     "pr-blocktags-help": "输入用英文逗号 ',' 隔开的你想要过滤的标签列表，大小写不敏感",
+    "pr-showonlinetime": "显示我的上线时间",
     "pr_register.register-notice": "注册前请查看<a href='../topic/14'>注册说明</a>；DKIM 注册请点击<a href='./pr_dkim_upload'>上传界面</a>提交含 DKIM 签名的邮件",
     "pr_register.username_warning": "目前由于代码中的bug，注册时只能使用纯ASCII字符。注册完成后可以在用户设置中修改用户名为非ASCII字符",
     "pr_register.button": "生成邮件验证信息",
