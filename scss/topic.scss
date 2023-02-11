@@ -12,7 +12,7 @@
 			font-size: 24px;
 			color:inherit;
 			line-height: 32px;
-			@include media-breakpoint-down(sm) {
+			@media (max-width: @screen-sm-max) {
 				font-size: 18px;
 				line-height: 24px;
 				margin-top: 0px;
@@ -21,7 +21,7 @@
 
 		> span {
 			text-transform: uppercase;
-			color: $gray-600;
+			color: @gray-light;
 			display: inline-block;
 			margin-top: 8px;
 		}
@@ -33,24 +33,40 @@
 
 	[component="topic/labels"] {
 		font-size: 20px;
-		color: $text-muted;
+		color: @text-muted;
 	}
 
 	[component="topic/browsing-users"] {
 		margin-bottom: -5px;
 	}
 	.topic-header {
-		top: var(--panel-offset);
-		background-color: $body-bg;
-		z-index: $zindex-dropdown; // allows for top nav dropdowns to appear on top
+		position: sticky;
+		top: calc(var(--panel-offset) - 20px);
+		background-color: @body-bg;
+		z-index: @zindex-navbar;
+		margin-left: -15px;
+		margin-right: -15px;
+		padding-left: 15px;
+		padding-right: 15px;
 	}
 
 	.topic-info {
-		border-bottom: 1px solid $post-border-color;
+		border-bottom: 1px solid @post-border-color;
 		margin-bottom: 10px;
 		padding-bottom: 10px;
 		> * {
 			padding-top: 10px;
+		}
+	}
+	.category-item {
+		.icon {
+			min-width: 23px;
+    		min-height: 23px;
+    		font-size: 10px;
+    		line-height: 12px;
+    		padding: 5px;
+			margin-right: 5px;
+			border-radius: 50%;
 		}
 	}
 
@@ -102,7 +118,7 @@
 				top: 0px;
 				z-index: 1;
 
-				@include media-breakpoint-up(md) {
+				@media (min-width: @screen-md-min) {
 					top: 2px;
 					font-size: 16px;
 				}
@@ -121,40 +137,40 @@
 	.login-required {
 		display: inline-block;
 		padding: 0 0.5em;
-		border: 1px dashed $gray-600;
+		border: 1px dashed @gray-light;
 	}
 
 	.bookmarked {
 		font-size: 16px;
-		color: darken($post-highlight, 20%);
+		color: darken(@post-highlight, 20%);
 		opacity: 0;
-		@include transition(0.75s ease-in-out opacity);
+		.transition(0.75s ease-in-out opacity);
 		margin-left: 5px;
 	}
 
 	[component="post/anchor"] {
 		position: relative;
-		top: -$post-padding;
+		top: -@post-padding;
 	}
 
 	[component="post/upvote"], [component="post/downvote"] {
+		color: @gray-light;
 		display: inline-block;
 		padding: 1rem;
-		color: $text-muted;
 
 		&:focus {
 				text-decoration: none;
 		}
 	}
 
-	[component="post/upvote"].upvoted i {
-		@include fa-icon-solid($fa-var-circle-chevron-up);
-		color: $primary;
+	[component="post/upvote"].upvoted i::before {
+		content: @fa-var-chevron-circle-up;
+		color: @brand-primary;
 	}
 
-	[component="post/downvote"].downvoted i {
-		@include fa-icon-solid($fa-var-circle-chevron-down);
-		color: $primary;
+	[component="post/downvote"].downvoted i::before {
+		content: @fa-var-chevron-circle-down;
+		color: @brand-primary;
 	}
 
 	[component="post/vote-count"] {
@@ -169,11 +185,12 @@
 
 	.threaded-replies {
 		margin-left: 60px;
-		padding: 1rem 0px;
+		margin-top: 10px;
 		text-decoration: none;
+		font-size: 11px;
 
 		img, .user-icon {
-			@include user-icon-style(16px, 10px, 50%);
+			.user-icon-style(16px, 10px, 50%);
 			vertical-align: 1px;
 		}
 
@@ -185,21 +202,41 @@
 			margin-left: 3px;
 		}
 
+		.replies-last {
+			color: @gray-light;
+		}
+
 		.fa {
 			font-size: 80%;
 		}
 
 		.avatars {
 			position: relative;
+
+			&.hasMore > *:last-child:after {
+				content: "\2022\2022\2022";
+				width: 16px;
+				height: 16px;
+				line-height: 16px;
+				background: #000;
+				opacity: .6;
+				color: white;
+				position: absolute;
+				right: 2px;
+				border-radius: 50%;
+				bottom: -1px;
+				text-align: center;
+				font-size: 12px;
+			}
 		}
 	}
 
 	[component="post/replies"] {
 		margin-left: 61px;
-		margin-top: $post-padding;
+		margin-top: @post-padding;
 		border-left: 5px solid #eee;
 		padding-left: 20px;
-		.timeline-event { display: none; }
+
 		[component="post"]:last-child > hr {
 			display: none;
 		}
@@ -220,16 +257,16 @@
 			margin-top: 2px;
 			display: block;
 
-			color: $gray-600;
+			color: @gray-light;
 
 			strong {
-				color: $gray-800;
+				color: @gray-dark;
 			}
 		}
 	}
 
 	.content {
-		margin-top: $post-padding;
+		margin-top: @post-padding;
 		padding-bottom: 1px;
 		margin-top: -43px;
 		margin-left: 38px;
@@ -241,11 +278,12 @@
 	.post-tools {
 		a {
 			padding: 1rem 10px;
-			@include pointer;
+			.pointer;
 		}
 	}
 
 	.moderator-tools {
+		margin-left: 10px;
 		font-size: 14px;
 
 		> a {
@@ -257,7 +295,7 @@
 			background: white !important;
 			color: #333;
 			&:hover {
-				background: $primary !important;
+				background: @brand-primary !important;
 			}
 		}
 	}
@@ -268,12 +306,12 @@
 		}
 
 		.btn {
-			background: $body-bg;
+			background: @body-bg;
 			text-transform: uppercase;
 			font-weight: 600;
 			box-shadow: none !important;
 			font-size: 11px;
-			color: $gray-600;
+			color: @gray-light;
 			padding: 0;
 		}
 	}
@@ -290,7 +328,7 @@
 		word-wrap: break-word;
 	}
 
-	@include media-breakpoint-down(sm) {
+	@media (max-width: @screen-sm-max) {
 		.content {
 			margin-left: 0;
 			margin-top: -10px;
@@ -308,10 +346,10 @@
 		.posts .icon {
 			min-width: 0;
 			min-height: 0;
-			margin-top: 0px;
+			margin-top: -3px;
 
 			.avatar {
-				@include user-icon-style(23px, calc(23px * 0.6), 50%);
+				.user-icon-style(23px, 1.3rem, 50%);
 			}
 		}
 
@@ -339,7 +377,7 @@
 				font-size: 12px;
 				top: 0px;
 
-				@include media-breakpoint-up(md) {
+				@media (min-width: @screen-md-min) {
 					top: 2px;
 					font-size: 16px;
 				}
@@ -351,10 +389,10 @@
 		}
 
 		.quickreply-message {
-			margin-left: 63px;
+			margin-left: 61px;
 			margin-bottom: 5px;
 
-			@include media-breakpoint-down(sm) {
+			@media (max-width: @screen-sm-max) {
 				margin-left: 0;
 
 				[component="topic/quickreply/text"] {
@@ -362,6 +400,10 @@
 					padding: 10px;
 				}
 			}
+		}
+
+		[component="topic/quickreply/button"] {
+			margin-bottom: 10px;
 		}
 	}
 }
@@ -378,7 +420,7 @@
 
 	.posts {
 		&.timeline {
-			@include timeline-style;
+			.timeline-style;
 		}
 
 		list-style-type: none;
@@ -386,7 +428,7 @@
 
 		[component="post"] {
 			position: relative;
-			@include transition(0.75s ease-in-out border-color);
+			.transition(0.75s ease-in-out border-color);
 
 			.edit-icon {
 				vertical-align: -2%;
@@ -403,8 +445,8 @@
 			}
 
 			&.highlight {
-				border-color: darken($post-highlight, 20%);
-				box-shadow: 0px 2px 2px -2px $post-highlight;
+				border-color: darken(@post-highlight, 20%);
+				box-shadow: 0px 2px 2px -2px @post-highlight;
 
 				.bookmarked {
 					opacity: 1;
@@ -413,7 +455,11 @@
 		}
 
 		.content {
-			@include fix-lists;
+			.fix-lists;
+
+			blockquote {
+				font-size: 12px;
+			}
 
 			> blockquote {
 				> blockquote {
@@ -429,8 +475,7 @@
 				}
 			}
 
-			iframe, .img-fluid {
-				max-width: 85%;
+			iframe, .img-responsive {
 				display: inline;
 			}
 
@@ -453,7 +498,7 @@
 				}
 			}
 
-			@include media-breakpoint-down(sm) {
+			@media (max-width: @screen-sm-min) {
 				pre {
 					max-height: 250px;
 				}
@@ -463,7 +508,7 @@
 
 	.pagination-block {
 		position: fixed;
-		background-color: $gray-200;
+		background-color: @gray-lighter;
 		bottom: 0px;
 		right: 0px;
 		z-index: 100;
@@ -471,7 +516,7 @@
 		opacity: 0;
 
 		.pagination-text {
-			color: $text-muted;
+			color: @text-color;
 			position: relative;
     		top: -3px;
     		font-weight: bolder;
@@ -487,6 +532,7 @@
 				padding-left: 20px;
 				padding-right: 20px;
 				padding-top: 10px;
+				padding-bottom: 10px;
 			}
 			.dropdown-menu {
 				width: 475px;
@@ -500,7 +546,7 @@
 				}
 				.scroller-container {
 					height: 300px;
-					border-right: 3px solid $gray-200;
+					border-right: 3px solid @gray-lighter;
 					margin-right: 3px;
 					cursor: pointer;
 					.scroller-thumb {
@@ -514,7 +560,7 @@
 						.scroller-thumb-icon {
 							width: 9px;
 							height: 40px;
-							background-color: $primary;
+							background-color: @brand-primary;
 							position: relative;
 							display: inline-block;
 							border-radius: 3px;
@@ -529,22 +575,21 @@
 					}
 				}
 			}
-			@include media-breakpoint-down(sm) {
+			@media (max-width: @screen-sm-min) {
 				.dropdown-menu {
 					width: 100%;
 				}
 			}
 		}
 		.progress-bar {
-			background-color: $info;
+			background-color: @brand-info;
 			display:block;
 			z-index: -1;
 			position: absolute;
 			transition: width 50ms ease-in;
-			height: 100%;
 		}
 	}
-	@include media-breakpoint-down(sm) {
+	@media (max-width: @screen-sm-min) {
 		.pagination-block {
 			width: 100%;
 		}
@@ -558,7 +603,7 @@
 		position: relative;
 
 		img, .user-icon {
-			@include user-icon-style(20px, 1rem, 50%);
+			.user-icon-style(20px, 1rem, 50%);
 			vertical-align: middle;
 			margin: 0 7px;
 		}
@@ -574,13 +619,13 @@
 			top: -36px;
 			left: 7px;
 
-			@include transition("opacity ease 250ms, top ease 250ms")
+			.transition(~"opacity ease 250ms, top ease 250ms")
 		}
 
 		&.replying::after {
 			opacity: 1;
 			top: -50px;
-			animation: topic-reply-pulse 2s ease-in infinite;
+			.animation(topic-reply-pulse 2s ease-in infinite);
 		}
 	}
 
@@ -593,7 +638,34 @@
 	}
 }
 
+.fork-thread-card {
+	position: fixed;
+	bottom: 10%;
+	right: 2rem;
+	z-index: 1;
+}
+
+.selection-tooltip-container {
+	position: absolute;
+	padding: 5px;
+	border: 1px solid @well-border;
+	background-color: @well-bg;
+	border-radius: 3px;
+	margin: 10px 0px 0px 0px;
+	z-index: 1;
+}
+
+@media screen and (min-width: @screen-sm-min) {
+	.fork-thread-card {
+		max-width: 33%;
+	}
+}
+
 [component="post"] {
+	.avatar.avatar-sm2x {
+		font-size: 2.875rem;
+	}
+
 	>.post-header [component="user/picture"], >.post-header [component="user/status"] {
 		opacity: 1;
 	}
@@ -602,16 +674,15 @@
 		opacity: 0;
 	}
 
-	&.selected {
+	&.bg-success {
 		background-color: initial;
 
 		>.post-header .icon:before {
-			border: 1px solid $success;
-    		color: $white;
-			background-color: $success;
+			border: 1px solid #5cb85c;
+    		color: #5cb85c;
     		-webkit-transition: .2s ease-in-out all;
     		transition: .2s ease-in-out all;
-			content: fa-content($fa-var-check);
+    		content: "\f00c";
     		padding: 14px;
 		    border-radius: 50%;
 		    opacity: 1;
