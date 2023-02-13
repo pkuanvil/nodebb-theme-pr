@@ -7,6 +7,7 @@
     "settings.autoHidingNavbar-sm": "Smaller screens (e.g. phones, some tablets)",
     "settings.autoHidingNavbar-md": "Medium sized screens (e.g. tablets in landscape mode)",
     "settings.autoHidingNavbar-lg": "Larger screens (e.g. desktop computers)",
+    "pr-quickreply.expand": "Open Composer",
     "pr-filter": "Filter",
     "pr-blocktags": "Filter tags",
     "pr-blocktags-help": "Enter the list of tags separated by comman ',' that you want to filter, case insensitive",
