@@ -7,7 +7,7 @@
 		<meta itemprop="position" content="{../index}" />
 		<a id="{../index}" data-index="{../index}" component="topic/anchor"></a>
 
-		<div class="col-md-6 col-sm-9 col-xs-10 content">
+		<div class="col-md-6 col-sm-8 col-xs-10 content">
 			<div class="avatar pull-left">
 				<!-- IF showSelect -->
 				<div class="select" component="topic/select">
@@ -92,7 +92,7 @@
 			<small>[[global:views]]</small>
 		</div>
 
-		<div class="col-md-3 col-sm-3 teaser hidden-xs" component="topic/teaser">
+		<div class="col-md-3 col-sm-4 teaser hidden-xs" component="topic/teaser">
 			<div class="card background-link-container" style="border-color: {topics.category.bgColor}">
 				<a class="background-link" href="{config.relative_path}/topic/{topics.slug}/{topics.teaser.index}"></a>
 				<!-- IF topics.unreplied -->
