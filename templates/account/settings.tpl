@@ -114,21 +114,6 @@
 				<strong>[[user:posts_per_page]] ([[user:max_items_per_page, {maxPostsPerPage}]])</strong><br /> <input type="text" class="form-control" data-property="postsPerPage" value="{settings.postsPerPage}"><br />
 			</div>
 
-			<!-- IF !disableEmailSubscriptions -->
-			<h4>[[global:email]]</h4>
-			<div class="well">
-				<div class="form-group">
-					<label for="dailyDigestFreq">[[user:digest_label]]</label>
-					<select class="form-control" id="dailyDigestFreq" data-property="dailyDigestFreq" autocomplete="off">
-						{{{each dailyDigestFreqOptions}}}
-						<option value="{dailyDigestFreqOptions.value}" <!-- IF dailyDigestFreqOptions.selected -->selected="1"<!-- ENDIF dailyDigestFreqOptions.selected -->>{dailyDigestFreqOptions.name}</option>
-						{{{end}}}
-					</select>
-					<p class="help-block">[[user:digest_description]]</p>
-				</div>
-			</div>
-			<!-- ENDIF !disableEmailSubscriptions -->
-
 			{{{each customSettings}}}
 			<h4>{customSettings.title}</h4>
 			<div class="well">
@@ -188,6 +173,20 @@
 				</div>
 			</div>
 
+			<!-- IF !disableEmailSubscriptions -->
+			<h4>[[global:email]]</h4>
+			<div class="well">
+				<div class="form-group">
+					<label for="dailyDigestFreq">[[user:digest_label]]</label>
+					<select class="form-control" id="dailyDigestFreq" data-property="dailyDigestFreq" autocomplete="off">
+						{{{each dailyDigestFreqOptions}}}
+						<option value="{dailyDigestFreqOptions.value}" <!-- IF dailyDigestFreqOptions.selected -->selected="1"<!-- ENDIF dailyDigestFreqOptions.selected -->>{dailyDigestFreqOptions.name}</option>
+						{{{end}}}
+					</select>
+					<p class="help-block">[[user:digest_description]]</p>
+				</div>
+			</div>
+			<!-- ENDIF !disableEmailSubscriptions -->
 
 			<h4>[[user:notifications]]</h4>
 			<div class="well">
