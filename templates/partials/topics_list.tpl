@@ -7,6 +7,7 @@
 		<meta itemprop="position" content="{../index}" />
 		<a id="{../index}" data-index="{../index}" component="topic/anchor"></a>
 
+		<div class="{{{ if topics.excerpt }}}row-with-excerpt{{{ end }}}">
 		<div class="col-md-6 col-sm-8 col-xs-10 content">
 			<div class="avatar pull-left">
 				<!-- IF showSelect -->
@@ -69,6 +70,9 @@
 					<!-- ENDIF topics.teaser.timestamp -->
 				</small>
 			</h2>
+			{{{ if topics.excerpt }}}
+			<div class="excerpt">{topics.excerpt}</div>
+			{{{ end }}}
 		</div>
 
 		<div class="mobile-stat col-xs-2 visible-xs text-right">
@@ -107,12 +111,13 @@
 						<span class="timeago" title="{topics.teaser.timestampISO}"></span>
 					</a>
 				</p>
-				<div class="post-content">
+				<div class="post-content{{{ if topics.excerpt }}} teaser-excerpt-align{{{end}}}">
 					{topics.teaser.content}
 				</div>
 				<!-- ENDIF topics.teaser.pid -->
 				<!-- ENDIF topics.unreplied -->
 			</div>
+		</div>
 		</div>
 	</li>
 	{{{end}}}

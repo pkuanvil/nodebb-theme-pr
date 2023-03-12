@@ -91,6 +91,11 @@
 						<input type="checkbox" data-property="scrollToMyPost" <!-- IF settings.scrollToMyPost -->checked<!-- ENDIF settings.scrollToMyPost -->/> <strong>[[user:scroll_to_my_post]]</strong>
 					</label>
 				</div>
+				<div class="checkbox">
+					<label>
+						<input type="checkbox" data-property="pr_useExcerpt" <!-- IF settings.pr_useExcerpt -->checked<!-- ENDIF settings.pr_useExcerpt -->/> <strong>[[persona:pr-use-excerpt]]</strong>
+					</label>
+				</div>
 			</div>
 
 			<h4>[[persona:pr-filter]]</h4>
