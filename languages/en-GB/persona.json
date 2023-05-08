@@ -13,7 +13,7 @@
     "pr-blocktags-help": "Enter the list of tags separated by comman ',' that you want to filter, case insensitive",
     "pr-showonlinetime": "Show My Online Time",
     "pr-use-excerpt": "Show Topic Excerpt",
-    "pr_register.register-notice": "Please see <a href='../topic/14'>register instructions</a> before registeration; for DKIM register, please click <a href='./pr_dkim_upload'>upload page</a> to submit email with DKIM Signature",
+    "pr_register.register-notice": "Please see <a href='../topic/14'>register instructions</a> before registeration; for DKIM register, please click <a href='./pr_dkim_upload'>upload page</a> to submit email with DKIM Signature; for Invite code register, please click <a href='./pr_invite_register'>here</a>",
     "pr_register.username_warning": "Currently due to bugs in code, only ASCII characters can be used during registeration. Once registered, username can be modified to non-ASCII characters in user settings",
     "pr_register.button": "Generate Email Verify Text",
     "pr_register.message-1": "Please use this site's recognized email address (see <a href='./pr_email_domains'>/pr_email_domains</a>) to send the following text to email ",
