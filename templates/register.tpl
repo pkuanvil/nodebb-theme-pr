@@ -16,6 +16,7 @@
 				<div class="pr-warning" id="pr-register-notice">
 					<strong>[[persona:pr_register.register-notice]]</strong>
 				</div>
+				<p></p>
 				<form component="register/local" class="form-horizontal" role="form" action="{config.relative_path}/register" method="post">
 					<div class="form-group">
 						<label for="username" class="col-lg-4 control-label">[[register:username]]</label>
@@ -44,19 +45,21 @@
 							<span class="register-feedback" id="password-confirm-notify"></span>
 						</div>
 					</div>
-					<div class="col-lg-offset-4 col-lg-8">
-						<button class="btn btn-lg btn-block" id="pr-button" type="submit">[[persona:pr_register.button]]</button>
-					</div>
-					<div class="col-lg-offset-4 col-lg-8">
-						<label for="pr-txt">
-							<span>[[persona:pr_register.message-1]]</span>
-							<span id="pr-email"></span>
-							<span>[[persona:pr_register.message-2]]</span>
-						</label>
-						<div>
-							<span id="pr-feedback"></span>
+					<div class="form-group">
+						<div class="col-lg-offset-4 col-lg-8">
+							<button class="btn btn-lg btn-block" id="pr-button" type="submit">[[persona:pr_register.button]]</button>
 						</div>
-						<div id="pr-txt" style="line-break: anywhere"></div>
+						<div class="col-lg-offset-4 col-lg-8">
+							<label for="pr-txt">
+								<span>[[persona:pr_register.message-1]]</span>
+								<span id="pr-email"></span>
+								<span>[[persona:pr_register.message-2]]</span>
+							</label>
+							<div>
+								<span id="pr-feedback"></span>
+							</div>
+							<div id="pr-txt" style="line-break: anywhere"></div>
+						</div>
 					</div>
 
 					{{{each regFormEntry}}}
