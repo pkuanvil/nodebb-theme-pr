@@ -50,7 +50,9 @@ library.addProfileItem = async (data) => {
 
 library.defineWidgetAreas = async function (areas) {
 	const locations = ['header', 'sidebar', 'footer'];
+	// @pkuanvil: add new widget area declaration here.
 	const templates = [
+		'account/settings.tpl',
 		'categories.tpl', 'category.tpl', 'topic.tpl', 'users.tpl',
 		'unread.tpl', 'recent.tpl', 'popular.tpl', 'top.tpl', 'tags.tpl', 'tag.tpl',
 		'login.tpl', 'register.tpl',
