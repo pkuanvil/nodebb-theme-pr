@@ -10,6 +10,7 @@
     "pr-quickreply.expand": "Open Composer",
     "pr-filter": "Filter",
     "pr-blocktags": "Filter tags",
+    "pr-blocktags-help-2-trunc": "Enter the list of tags separated by comma ',' that you want to filter. Tags are case insensitive.",
     "pr-blocktags-help-2": "Enter the list of tags separated by comma ',' that you want to filter. Tags are case insensitive.<br/>If this list is left unfilled, the following default filter tags will be used: %1.<br/>(Enter a single comma ',' to disable default filter tags)",
     "pr-showonlinetime": "Show My Online Time",
     "pr-use-excerpt": "Show Topic Excerpt",

@@ -103,7 +103,11 @@
 				<div class="form-group">
 					<label for="pr_blockTags">[[persona:pr-blocktags]]</label>
 					<input type="text" class="form-control" data-property="pr_blockTags" id="pr_blockTags" value="{settings.pr_blockTags}"/>
-					<p class="help-block">[[persona:pr-blocktags-help-2, {pr_globalDefaults.defaultBlockTagsStr}]]</p>
+					<!-- IF pr_globalDefaults.defaultBlockTagsStr -->
+						<p class="help-block">[[persona:pr-blocktags-help-2, {pr_globalDefaults.defaultBlockTagsStr}]]</p>
+					<!-- ELSE -->
+						<p class="help-block">[[persona:pr-blocktags-help-2-trunc, {pr_globalDefaults.defaultBlockTagsStr}]]</p>
+					<!-- ENDIF pr_globalDefaults.defaultBlockTagsStr -->
 				</div>
 			</div>
 

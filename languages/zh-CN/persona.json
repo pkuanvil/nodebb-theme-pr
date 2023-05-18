@@ -11,6 +11,7 @@
     "pr-quickreply.expand": "打开编辑器",
     "pr-filter": "过滤",
     "pr-blocktags": "过滤标签",
+    "pr-blocktags-help-2-trunc": "输入用英文逗号 ',' 隔开的你想要过滤的标签列表。标签对大小写不敏感。",
     "pr-blocktags-help-2": "输入用英文逗号 ',' 隔开的你想要过滤的标签列表。标签对大小写不敏感。<br/>当此列表留空时，将使用以下默认的过滤标签：%1。<br/>（输入单个英文逗号 ',' 以禁用默认的过滤标签）",
     "pr-showonlinetime": "显示我的上线时间",
     "pr-use-excerpt": "显示主题摘要",
