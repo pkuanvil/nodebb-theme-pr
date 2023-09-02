@@ -2,6 +2,22 @@
 
 	.topic-list {
 		overflow: visible;
+		.row-with-excerpt {
+			.card {
+				overflow: unset;
+				height: unset;
+				min-height: 53px;
+			}
+			.excerpt {
+				// avatar is 'float: left'
+				padding-top: 10px;
+				overflow-wrap: break-word;
+			}
+		}
+		.teaser-excerpt-align {
+			font-size: 14px;
+			line-height: 1.5;
+		}
 	}
 
 	> ul {
@@ -15,6 +31,8 @@
 
 				h2 a {
 					color: $text-muted;
+					// @pkuanvil: Use normal font-weight for read topic
+					font-weight: 400;
 				}
 			}
 			.info {

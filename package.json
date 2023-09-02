@@ -1,14 +1,14 @@
 {
-  "name": "nodebb-theme-persona",
+  "name": "@pkuanvil/nodebb-theme-pr",
   "version": "13.2.25",
   "nbbpm": {
     "compatibility": "^3.3.0"
   },
-  "description": "Persona theme for NodeBB",
+  "description": "PR theme for NodeBB",
   "main": "library.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/NodeBB/nodebb-theme-persona"
+    "url": "https://github.com/pkuanvil/nodebb-theme-pr"
   },
   "scripts": {
     "lint": "eslint ."

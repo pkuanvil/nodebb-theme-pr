@@ -54,6 +54,12 @@
 					</strong>
 				</div>
 				<!-- ENDIF !hideFullname -->
+				<div class="form-check">
+					<input class="form-check-input" type="checkbox" data-property="pr_showOnlineTime" <!-- IF settings.pr_showOnlineTime -->checked<!-- ENDIF settings.pr_showOnlineTime -->/>
+					<strong>
+						<label class="form-check-label">[[persona:pr-showonlinetime]]</label>
+					</strong>
+				</div>
 				<!-- IF !config.disableChat -->
 				<div class="form-check">
 					<input class="form-check-input" type="checkbox" data-property="restrictChat" <!-- IF settings.restrictChat -->checked<!-- ENDIF settings.restrictChat -->/>
@@ -93,6 +99,23 @@
 						<label class="form-check-label">[[user:scroll_to_my_post]]</label>
 					</strong>
 				</div>
+				<div class="form-check">
+					<input class="form-check-input" type="checkbox" data-property="pr_useExcerpt" <!-- IF settings.pr_useExcerpt -->checked<!-- ENDIF settings.pr_useExcerpt -->/>
+					<strong>
+						<label>[[persona:pr-use-excerpt]]</label>
+					</strong>
+				</div>
+			</div>
+
+			<h4>[[persona:pr-filter]]</h4>
+			<div class="card card-body mb-3">
+				<label for="pr_blockTags">[[persona:pr-blocktags]]</label>
+				<input type="text" class="form-control" data-property="pr_blockTags" id="pr_blockTags" value="{settings.pr_blockTags}"/>
+				<!-- IF pr_globalDefaults.defaultBlockTagsStr -->
+					<p class="form-text">[[persona:pr-blocktags-help-2, {pr_globalDefaults.defaultBlockTagsStr}]]</p>
+				<!-- ELSE -->
+					<p class="form-text">[[persona:pr-blocktags-help-2-trunc, {pr_globalDefaults.defaultBlockTagsStr}]]</p>
+				<!-- ENDIF pr_globalDefaults.defaultBlockTagsStr -->
 			</div>
 
 			<h4>[[global:pagination]]</h4>
@@ -210,6 +233,20 @@
 				</div>
 			</div>
 
+			<!-- IF !disableEmailSubscriptions -->
+			<h4>[[global:email]]</h4>
+			<div class="well">
+				<div class="form-group">
+					<label for="dailyDigestFreq">[[user:digest_label]]</label>
+					<select class="form-control" id="dailyDigestFreq" data-property="dailyDigestFreq" autocomplete="off">
+						{{{each dailyDigestFreqOptions}}}
+						<option value="{dailyDigestFreqOptions.value}" <!-- IF dailyDigestFreqOptions.selected -->selected="1"<!-- ENDIF dailyDigestFreqOptions.selected -->>{dailyDigestFreqOptions.name}</option>
+						{{{end}}}
+					</select>
+					<p class="help-block">[[user:digest_description]]</p>
+				</div>
+			</div>
+			<!-- ENDIF !disableEmailSubscriptions -->
 
 			<h4>[[user:notifications]]</h4>
 			<div class="card card-body mb-3">
@@ -222,8 +259,10 @@
 						<select class="form-select" data-property="{notificationSettings.name}">
 							<option value="none" <!-- IF notificationSettings.none -->selected<!-- ENDIF notificationSettings.none -->>[[notifications:none]]</option>
 							<option value="notification" <!-- IF notificationSettings.notification -->selected<!-- ENDIF notificationSettings.notification -->>[[notifications:notification_only]]</option>
+							<!-- IF !pr_globalDefaults.disableEmailSubscriptions -->
 							<option value="email" <!-- IF notificationSettings.email -->selected<!-- ENDIF notificationSettings.email -->>[[notifications:email_only]]</option>
 							<option value="notificationemail" <!-- IF notificationSettings.notificationemail -->selected<!-- ENDIF notificationSettings.notificationemail -->>[[notifications:notification_and_email]]</option>
+							<!-- ENDIF !pr_globalDefaults.disableEmailSubscriptions -->
 						</select>
 					</div>
 				</div>

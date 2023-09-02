@@ -1,0 +1,17 @@
+{
+	"pr-quickreply.expand": "打开编辑器",
+	"pr-filter": "过滤",
+	"pr-blocktags": "过滤标签",
+	"pr-blocktags-help-2-trunc": "输入用英文逗号 ',' 隔开的你想要过滤的标签列表。标签对大小写不敏感。",
+	"pr-blocktags-help-2": "输入用英文逗号 ',' 隔开的你想要过滤的标签列表。标签对大小写不敏感。<br/>当此列表留空时，将使用以下默认的过滤标签：%1。<br/>（输入单个英文逗号 ',' 以禁用默认的过滤标签）",
+	"pr-showonlinetime": "显示我的上线时间",
+	"pr-use-excerpt": "显示主题摘要",
+	"pr_register.email_verify": "邮件验证信息",
+	"pr_register.register-notice": "注册前请查看<a href='../topic/14'>注册说明</a>；DKIM 注册请点击<a href='./pr_dkim_upload'>上传界面</a>提交含 DKIM 签名的邮件；邀请码注册请点击<a href='./pr_invite_register'>此处</a>",
+	"pr_register.username_warning": "目前由于代码中的bug，注册时只能使用纯ASCII字符。注册完成后可以在用户设置中修改用户名为非ASCII字符",
+	"pr_register.button": "生成邮件验证信息",
+	"pr_register.message-1": "请点击“生成邮件验证信息”后，将验证信息发送到邮件 ",
+	"pr_register.message-2": " 。请使用本站认可的邮件地址（详见 <a href='./pr_email_domains'>/pr_email_domains</a>）发送。建议您的验证邮件以纯文本模式发送，并把下述信息粘贴到邮件的标题和正文。<strong>发送后请稍等1-2分钟后，点击下方的“立即注册”。</strong>",
+	"pr_register.txt-placeholder": "（点击下方的按钮生成邮件验证信息）",
+	"pr_register.register-require-javascript": "注册需要 Javascript."
+}

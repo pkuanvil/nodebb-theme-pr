@@ -7,7 +7,7 @@
 		<meta itemprop="position" content="{../index}" />
 		<a id="{../index}" data-index="{../index}" component="topic/anchor"></a>
 
-		<div class="col-md-6 col-sm-9 col-10 content">
+		<div class="col-md-6 col-sm-8 col-10 content {{{ if topics.excerpt }}}row-with-excerpt{{{ end }}}">
 			<div class="avatar float-start me-2">
 				<!-- IF showSelect -->
 				<div class="select" component="topic/select">
@@ -65,6 +65,9 @@
 
 				<span class="visible-xs-inline timeago text-muted" title="{{{ if ./teaser.timestampISO }}}{./teaser.timestampISO}{{{ else }}}{./timestampISO}{{{ end }}}"></span>
 			</div>
+			{{{ if topics.excerpt }}}
+			<div class="excerpt">{topics.excerpt}</div>
+			{{{ end }}}
 		</div>
 
 		<div class="mobile-stat col-2 visible-xs text-end">
@@ -88,7 +91,7 @@
 			<small>[[global:views]]</small>
 		</div>
 
-		<div class="col-md-3 col-sm-3 teaser hidden-xs" component="topic/teaser">
+		<div class="col-md-3 col-sm-4 teaser hidden-xs" component="topic/teaser">
 			<div class="lastpost background-link-container" style="border-color: {topics.category.bgColor}">
 				<a class="background-link" href="{config.relative_path}/topic/{topics.slug}/{topics.teaser.index}"></a>
 				<!-- IF topics.unreplied -->
@@ -103,7 +106,7 @@
 						<span class="timeago" title="{topics.teaser.timestampISO}"></span>
 					</a>
 				</p>
-				<div class="post-content">
+				<div class="post-content{{{ if topics.excerpt }}} teaser-excerpt-align{{{end}}}">
 					{topics.teaser.content}
 				</div>
 				<!-- ENDIF topics.teaser.pid -->

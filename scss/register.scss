@@ -13,6 +13,11 @@
 .register-block {
 	margin-top: 15px;
 
+	.pr-warning {
+		color: brown;
+		font-weight: 700;
+	}
+
 	.register-success {
 		.form-control {
 			border-color: #5cb85c;
