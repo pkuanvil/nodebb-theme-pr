@@ -85,12 +85,12 @@
 				{{{ if !maintenanceHeader }}}
 				{{{ if config.loggedIn }}}
 				<ul id="logged-in-menu" class="navbar-nav me-0 mb-2 mb-lg-0 align-items-center">
-					<li class="nav-item notifications dropdown d-none d-sm-block" component="notifications" title="[[global:header.notifications]]">
+					<li class="nav-item notifications dropdown d-none d-sm-block" component="notifications">
 						<!-- IMPORT partials/header/notifications.tpl -->
 					</li>
 
 					{{{ if canChat }}}
-					<li class="nav-item chats dropdown" title="[[global:header.chats]]">
+					<li class="nav-item chats dropdown">
 						<!-- IMPORT partials/header/chats.tpl -->
 					</li>
 					{{{ end }}}
