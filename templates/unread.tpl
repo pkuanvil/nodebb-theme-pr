@@ -9,7 +9,7 @@
 		<div class="d-flex gap-1 align-items-stretch">
 			<!-- IMPORT partials/buttons/newTopic.tpl -->
 			<a href="{config.relative_path}/{selectedFilter.url}{querystring}" class="d-inline-block">
-				<div class="alert alert-warning h-100 m-0 px-2 py-1 d-flex align-items-center hide" id="new-topics-alert"></div>
+				<div class="alert alert-warning h-100 m-0 px-2 py-1 d-flex gap-1 align-items-center hide" id="new-topics-alert"><i class="fa fa-fw fa-rotate-right"></i>[[recent:load-new-posts]]</div>
 			</a>
 		</div>
 
@@ -26,10 +26,10 @@
 	</div>
 
 	<div class="category">
-		<div id="category-no-topics" class="alert alert-warning {{{ if topics.length }}}hidden{{{ end }}}">[[unread:no_unread_topics]]</div>
+		<div id="category-no-topics" class="alert alert-warning {{{ if topics.length }}}hidden{{{ end }}}">[[unread:no-unread-topics]]</div>
 
 		<!-- IMPORT partials/topics_list.tpl -->
-		<button id="load-more-btn" class="btn btn-primary hide">[[unread:load_more]]</button>
+		<button id="load-more-btn" class="btn btn-primary hide">[[unread:load-more]]</button>
 		{{{ if config.usePagination }}}
 		<!-- IMPORT partials/paginator.tpl -->
 		{{{ end }}}

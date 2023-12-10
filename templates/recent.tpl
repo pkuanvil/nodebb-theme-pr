@@ -13,7 +13,7 @@
 			<a component="category/post/guest" href="{config.relative_path}/login" class="btn btn-primary">[[category:guest-login-post]]</a>
 			{{{ end }}}
 			<a href="{config.relative_path}/{selectedFilter.url}{querystring}" class="d-inline-block">
-				<div class="alert alert-warning h-100 m-0 px-2 py-1 d-flex align-items-center hide" id="new-topics-alert"></div>
+				<div class="alert alert-warning h-100 m-0 px-2 py-1 d-flex gap-1 align-items-center hide" id="new-topics-alert"><i class="fa fa-fw fa-rotate-right"></i>[[recent:load-new-posts]]</div>
 			</a>
 		</div>
 		<div class="d-flex gap-1 align-items-stretch">
@@ -25,7 +25,7 @@
 
 	<div class="category">
 		<!-- IF !topics.length -->
-		<div class="alert alert-warning" id="category-no-topics">[[recent:no_recent_topics]]</div>
+		<div class="alert alert-warning" id="category-no-topics">[[recent:no-recent-topics]]</div>
 		<!-- ENDIF !topics.length -->
 
 		<!-- IMPORT partials/topics_list.tpl -->

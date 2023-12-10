@@ -1,8 +1,8 @@
 {
   "name": "@pkuanvil/nodebb-theme-pr",
-  "version": "13.2.25",
+  "version": "13.2.49",
   "nbbpm": {
-    "compatibility": "^3.3.0"
+    "compatibility": "^3.5.0"
   },
   "description": "PR theme for NodeBB",
   "main": "library.js",

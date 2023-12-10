@@ -8,10 +8,11 @@
 	<div class="category {{{if widgets.sidebar.length }}}col-lg-9 col-sm-12{{{ else }}}col-lg-12{{{ end }}}">
 		<!-- IMPORT partials/category/subcategory.tpl -->
 
+		{{{ if (topics.length || privileges.topics:create) }}}
 		<div class="topic-list-header sticky-top btn-toolbar justify-content-between py-2 mb-2 flex-nowrap">
 			<div class="d-flex gap-1 align-items-stretch">
 				{{{ if privileges.topics:create }}}
-				<a href="{config.relative_path}/compose?cid={cid}" component="category/post" id="new_topic" class="btn btn-primary text-nowrap" data-ajaxify="false" role="button">[[category:new_topic_button]]</a>
+				<a href="{config.relative_path}/compose?cid={cid}" component="category/post" id="new_topic" class="btn btn-primary text-nowrap" data-ajaxify="false" role="button">[[category:new-topic-button]]</a>
 				{{{ else }}}
 					{{{ if !loggedIn }}}
 					<a component="category/post/guest" href="{config.relative_path}/login" class="btn btn-primary">[[category:guest-login-post]]</a>
@@ -19,7 +20,7 @@
 				{{{ end }}}
 
 				<a href="{config.relative_path}/{selectedFilter.url}{querystring}" class="d-inline-block">
-					<div class="alert alert-warning h-100 m-0 px-2 py-1 d-flex align-items-center hide" id="new-topics-alert"></div>
+					<div class="alert alert-warning h-100 m-0 px-2 py-1 d-flex gap-1 align-items-center hide" id="new-topics-alert"><i class="fa fa-fw fa-rotate-right"></i>[[recent:load-new-posts]]</div>
 				</a>
 			</div>
 			<div component="category/controls" class="d-flex gap-1 align-items-stretch">
@@ -28,14 +29,13 @@
 				<!-- IMPORT partials/category/tools.tpl -->
 			</div>
 		</div>
+		{{{ end }}}
 
-		{{{ if !topics.length }}}
-		{{{ if privileges.topics:create }}}
+		{{{ if (!topics.length && privileges.topics:create)}}}
 		<hr class="visible-xs" />
 		<div class="alert alert-warning" id="category-no-topics">
-			[[category:no_topics]]
+			[[category:no-topics]]
 		</div>
-		{{{ end }}}
 		{{{ end }}}
 
 		<!-- IMPORT partials/topics_list.tpl -->

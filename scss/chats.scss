@@ -23,10 +23,13 @@ body.page-user-chats {
 	$calcHeight: calc(100vh - var(--panel-offset) - $spacer);
 	overflow: hidden;
 	height: 100%;
+	[data-widget-area="footer"] {
+		display: none;
+	}
 	> #panel {
 		height: $calcHeight;
 		> .container {
-			height: $calcHeight;
+			height: 100%;
 		}
 	}
 }
@@ -47,7 +50,6 @@ body.page-user-chats {
 .chats-full, .chat-modal {
 	display: flex;
 	flex-wrap: nowrap;
-	height: calc(100vh - var(--panel-offset) - $spacer);
 
 	[component="chat/nav-wrapper"] {
 		width: 300px;
@@ -280,14 +282,16 @@ body.page-user-chats {
 			flex: 1;
 		}
 	}
-	[component="chat/user/list/btn"] {
+	[component="chat/user/list/btn"], [component="chat/pinned/messages/btn"] {
 		display: none!important;
 	}
 }
 
 .expanded-chat, .chat-modal {
 	.chat-content {
-		@include fix-lists;
+		.message-body {
+			@include fix-lists;
+		}
 		overflow-y: auto;
 		overflow-x: hidden;
 		resize: none;
@@ -326,7 +330,7 @@ body.page-user-chats {
 					}
 
 					[data-action="restore"] {
-						display: inline;
+						display: block;
 					}
 				}
 
@@ -341,7 +345,7 @@ body.page-user-chats {
 					}
 
 					[data-action="unpin"] {
-						display: inline;
+						display: block;
 					}
 				}
 			}
@@ -397,7 +401,9 @@ body.page-user-chats {
 
 				.controls {
 					display: none;
-
+					&:has([aria-expanded="true"]) {
+						display: flex;
+					}
 					position: absolute;
 					bottom: 7px;
 					right: 14px;
@@ -416,7 +422,7 @@ body.page-user-chats {
 					}
 
 					.controls {
-						display: block;
+						display: flex;
 					}
 				}
 			}
@@ -495,10 +501,19 @@ body.page-user-chats {
 /* Mobile handling of chat page */
 @include media-breakpoint-down(md) {
 	.page-user-chats {
-		padding-bottom: 0;
-
+		padding-bottom: 0!important;
+		> #panel {
+			height: 100%!important;
+			.container {
+				height: 100%!important;
+			}
+		}
 		[component="chat/nav-wrapper"] {
 			width: 100%;
+		}
+
+		&.chat-loaded .navbar {
+			display: none;
 		}
 
 		[component="chat/nav-wrapper"][data-loaded="1"] {

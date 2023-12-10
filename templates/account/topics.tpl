@@ -1,11 +1,11 @@
 <!-- IMPORT partials/account/header.tpl -->
 
 <div class="row">
-	<h1>{title}</h1>
+	<h1 class="fs-2">{title}</h1>
 	<!-- IF showSort -->
 	<div class="btn-toolbar justify-content-end mb-2">
 		<div class="btn-group bottom-sheet" component="thread/sort">
-			<button class="btn btn-outline-secondary dropdown-toggle" data-bs-toggle="dropdown" type="button"><span>[[topic:sort_by]]</span> <span class="caret"></span></button>
+			<button class="btn btn-outline-secondary dropdown-toggle" data-bs-toggle="dropdown" type="button"><span>[[topic:sort-by]]</span> <span class="caret"></span></button>
 			<ul class="dropdown-menu dropdown-menu-end">
 				{{{each sortOptions }}}
 				<li><a class="dropdown-item" href="{config.relative_path}{sortOptions.url}"><i class="fa fa-fw {{{if sortOptions.selected}}}fa-check{{{end}}}"></i>{sortOptions.name}</a></li>

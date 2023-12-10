@@ -6,7 +6,7 @@
             {selectedCategory.name}
         </span>
         {{{ else }}}
-    <span class="visible-sm-inline visible-md-inline visible-lg-inline">{{{ if selectCategoryLabel }}}{selectCategoryLabel}{{{ else }}}[[topic:thread_tools.select_category]]{{{ end }}}</span><span class="visible-xs-inline"><i class="fa fa-fw {{{ if selectCategoryIcon }}}{selectCategoryIcon}{{{ else }}}fa-list{{{ end }}}"></i></span>
+    <span class="visible-sm-inline visible-md-inline visible-lg-inline">{{{ if selectCategoryLabel }}}{selectCategoryLabel}{{{ else }}}[[topic:thread-tools.select-category]]{{{ end }}}</span><span class="visible-xs-inline"><i class="fa fa-fw {{{ if selectCategoryIcon }}}{selectCategoryIcon}{{{ else }}}fa-list{{{ end }}}"></i></span>
     {{{ end }}}</span> <span class="caret"></span>
 </button>
 <div component="category-selector-search" class="hidden position-absolute">
@@ -18,7 +18,7 @@
     </li>
     {{{each categoryItems}}}
     <li role="presentation" class="category {{{ if ../disabledClass }}}disabled {{{ end }}}" data-cid="{../cid}" data-name="{../name}" data-parent-cid="{../parentCid}">
-        <a class="dropdown-item" role="menu-item">{../level}
+        <a class="dropdown-item {{{ if ./disabledClass }}}disabled {{{ end }}}" role="menu-item" href="#">{../level}
             <span component="category-markup" style="{{{ if ../match }}}font-weight: bold;{{{end}}}">
                 <div class="category-item d-inline-block">
                     {{{ if ./icon }}}

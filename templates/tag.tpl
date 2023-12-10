@@ -14,6 +14,7 @@
 			{{{ end }}}
 		</div>
 		<div class="d-flex gap-1 align-items-stretch">
+		<!-- IMPORT partials/tags/watch.tpl -->
 		<!-- IMPORT partials/category/filter-dropdown-right.tpl -->
 		<!-- IMPORT partials/category/tools.tpl -->
 		</div>
@@ -21,11 +22,11 @@
 
 	<div class="category">
 		{{{ if !topics.length }}}
-		<div class="alert alert-warning">[[tags:no_tag_topics]]</div>
+		<div class="alert alert-warning">[[tags:no-tag-topics]]</div>
 		{{{ end }}}
 
 		<!-- IMPORT partials/topics_list.tpl -->
-		<button id="load-more-btn" class="btn btn-primary hide">[[unread:load_more]]</button>
+		<button id="load-more-btn" class="btn btn-primary hide">[[unread:load-more]]</button>
 		{{{ if config.usePagination }}}
 		<!-- IMPORT partials/paginator.tpl -->
 		{{{ end }}}
