@@ -50,9 +50,9 @@ library.defineWidgetAreas = async function (areas) {
 	const locations = ['header', 'sidebar', 'footer'];
 	// @pkuanvil: add new widget area declaration here.
 	const templates = [
-		'account/settings.tpl',
+		'account/settings.tpl', 'notifications.tpl',
 		'categories.tpl', 'category.tpl', 'topic.tpl', 'users.tpl',
-		'unread.tpl', 'recent.tpl', 'popular.tpl', 'top.tpl', 'tags.tpl', 'tag.tpl',
+		'unread.tpl', 'recent.tpl', 'popular.tpl', 	'top.tpl', 'tags.tpl', 'tag.tpl',
 		'login.tpl', 'register.tpl',
 	];
 	function capitalizeFirst(str) {
