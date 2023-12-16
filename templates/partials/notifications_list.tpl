@@ -15,6 +15,8 @@
 
 	<a href="{notifications.path}" class="notification-chat-content deco-none">
 		<span class="text">{notifications.bodyShort}</span>
+		<br />
+		<span class="text">{notifications.bodyLong}</span>
 	</a>
 
 	<div class="notification-chat-controls">
